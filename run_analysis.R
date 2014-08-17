@@ -4,7 +4,7 @@ main <- function() {
   dataFrameTrain <- getSet("train")
   dataFrameTest <- getSet("test")
   firstDataSet <- rbind(dataFrameTrain,dataFrameTest)
-  write.csv(firstDataSet,"dataSetOne.csv",row.names=FALSE)
+  write.table(firstDataSet,"dataSetOne.txt",row.names=FALSE)
   firstDataSet
 }
 
@@ -28,9 +28,9 @@ dataFrameOfX <- function(setType) {
   vec <- c()
   featureVector <- c(vec, 1:featureSize)
   for(i in 1:featureSize) {      
-    featureVector[i] = as.character(featuresArray$V2[i])
-  }
-  names(x)  <- featureVector
+    featureVector[i] = removeParans(as.character(featuresArray$V2[i]))
+  } 
+  names(x)  <-  featureVector
   keepColumns = getGoodFeatures()
   x <- x[keepColumns]
   x
@@ -44,7 +44,7 @@ getGoodFeatures <- function() {
   names(featuresDataFrame) <- c("RowNumber","Description")
   vec <- c()
   for( i in 1:nrow(featuresDataFrame)) {
-    desc = as.character(featuresDataFrame$Description[i])
+    desc = removeParans(as.character(featuresDataFrame$Description[i]))
     goodDescription <- grepl("mean",desc, ignore.case = TRUE) | grepl("std",desc, ignore.case = TRUE)
     if(goodDescription) {
       #print(desc)
@@ -54,6 +54,12 @@ getGoodFeatures <- function() {
   vec
 }
 
+removeParans <- function(name) {
+  name <- gsub("\\(", "", name)
+  name <- gsub("\\)", "", name)
+  name <- gsub("\\-", ".", name)
+  name <- gsub("\\,", ".", name)
+}
 dataFrameOfY <- function(setType) {
   rootDir = "UCI HAR Dataset"    
   filename = paste("y_",setType,".txt",sep="");
@@ -79,7 +85,7 @@ getGoodFeatures <- function() {
   names(featuresDataFrame) <- c("RowNumber","Description")
   vec <- c()
   for( i in 1:nrow(featuresDataFrame)) {
-    desc = as.character(featuresDataFrame$Description[i])
+    desc = removeParans(as.character(featuresDataFrame$Description[i]))
     goodDescription <- grepl("mean",desc, ignore.case = TRUE) | grepl("std",desc, ignore.case = TRUE)
     if(goodDescription) {
       #print(desc)
