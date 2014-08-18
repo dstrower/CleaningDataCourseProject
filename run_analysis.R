@@ -5,7 +5,9 @@ main <- function() {
   dataFrameTest <- getSet("test")
   firstDataSet <- rbind(dataFrameTrain,dataFrameTest)
   write.table(firstDataSet,"dataSetOne.txt",row.names=FALSE)
-  firstDataSet
+  tidyDataSet <- finishUp(firstDataSet)
+  write.table(tidyDataSet,"tidyDataSet.txt",row.names=FALSE)
+  tidyDataSet
 }
 
 getSet <- function(setName) {
@@ -14,6 +16,15 @@ getSet <- function(setName) {
    descDataFrame <- dataFrameSubject(setName)
    completeSet <- cbind(descDataFrame,YDataframe,XDataFrame)
    completeSet
+}
+
+dataFrameSubject <- function(setType) {
+  rootDir = "UCI HAR Dataset"    
+  filename = paste("subject_",setType,".txt",sep="");
+  subjectFileLocation = paste(rootDir,setType,filename,sep="/")
+  actvityDesc = read.table(subjectFileLocation)
+  names(actvityDesc) = c("Subject")
+  actvityDesc
 }
 
 dataFrameOfX <- function(setType) {
@@ -93,4 +104,50 @@ getGoodFeatures <- function() {
     }
   }
   vec
+}
+
+finishUp <- function(dataFrame) {
+  goodFeaturesDF <- getGoodFeatures()
+  goodFeatureVector <- getFeatureVector()
+  sub <- getSubjects(dataFrame)
+  subjectAvg <- dataFrame[0,]
+  for(i in 1:length(sub)) {
+    subject = sub[i]
+    averageDF <- workOnSubject(subject,dataFrame,goodFeaturesDF,goodFeatureVector)
+    subjectAvg <- rbind(subjectAvg,averageDF)
+  }
+  subjectAvg
+}
+
+getSubjects <- function(dataFrame) {  
+  sub <- sort(unique(dataFrame$Subject))
+}
+
+getActions <- function(dataFrame,subject) {
+  subjectDF <- dataFrame[dataFrame$Subject == subject,]
+  act <- sort(unique(subjectDF$Activity))
+}
+workOnSubject <- function(subject,dataFrame,goodFeaturesDF,goodFeatureVector) {
+  subjectAvg <- dataFrame[0,]
+  act <- getActions(dataFrame,subject)
+  for(i in 1:length(act)) {
+    action = act[i]
+    print(action)
+    smallDF <- subsetDataFrame(dataFrame,subject,action) 
+    averageDF <- getAverage(smallDF,goodFeaturesDF,goodFeatureVector)
+    subjectAvg <- rbind(subjectAvg,averageDF)
+  }
+  subjectAvg
+}
+getAverage <- function(smallDF,goodFeaturesDF,goodFeatureVector) {
+  size = nrow(smallDF)
+  numberColumnsOnly <- smallDF[goodFeaturesDF]
+  avg = colSums(numberColumnsOnly)
+  oneRow <- smallDF[1,]
+  for(i in 1:length(goodFeaturesDF)) {
+    number = avg[[i]]/size
+    #print(number)
+    oneRow[1,i+2] = number
+  }
+  oneRow
 }
