@@ -14,7 +14,7 @@ Instructions for creating the main tidy file.
  	<li>Using the Files dialog on the lower right conner, navigate to your new directory.</li>
  	<li>Select the option "Select as working directory" from under the "More" menu option on the lower right conner of R Studio.</li>
  	<li>Run the script as follows:
-	dataframe `<- main()`</li>
+	dataframe  <blockquote><- main() </blockquote></li>
 </ol>
  <p> Running the script will create two files:
  <ul>
