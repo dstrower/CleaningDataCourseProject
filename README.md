@@ -13,8 +13,9 @@ Instructions for creating the main tidy file.
  	<li>Start up R studio.</li>
  	<li>Using the Files dialog on the lower right conner, navigate to your new directory.</li>
  	<li>Select the option "Select as working directory" from under the "More" menu option on the lower right conner of R Studio.</li>
+	<li> Source the file run_analysis.R
  	<li>Run the script as follows:
-	dataframe  <blockquote><- main() </blockquote></li>
+	 main()</li>
 </ol>
  <p> Running the script will create two files:
  <ul>
