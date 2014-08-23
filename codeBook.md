@@ -23,4 +23,82 @@ These signals were used to estimate variables of the feature vector for each pat
 <li> tBodyAcc.std.Z - The standard deviation of: The time domain signal of the body acceleration in the z-axis (in xyz space) direction.</li>
 <li> tGravityAcc.mean.X - The mean of: The time domain signal of the gravity acceleration in the x-axis (in xyz space) direction. </li>
 <li> tGravityAcc.mean.Y - The mean of: The time domain signal of the gravity acceleration in the y-axis (in xyz space) direction.</li>
+<li> tGravityAcc.mean.Z -  The mean of: The time domain signal of the gravity acceleration in the z-axis (in xyz space) direction.</li>
+<li> tGravityAcc.std.X -  The standard deviation of: The time domain signal of the gravity acceleration in the x-axis (in xyz space) direction.  </li>
+<li> tGravityAcc.std.Y - The standard deviation of: The time domain signal of the gravity acceleration in the y-axis (in xyz space) direction.</li>
+<li> tGravityAcc.std.Z -  The standard deviation of: The time domain signal of the gravity acceleration in the z-axis (in xyz space) direction.</li>
+<li> tBodyAccJerk.mean.X - The mean of: The time domain signal of the body jerking (change in acceleration) in the x-axis (in xyz space) direction. </li>
+<li> tBodyAccJerk.mean.Y -  The mean of: The time domain signal of the body jerking (change in acceleration) in the y-axis (in xyz space) direction. </li>
+<li> tBodyAccJerk.mean.Z -  The mean of: The time domain signal of the body jerking (change in acceleration) in the z-axis (in xyz space) direction. </li>
+<li> tBodyAccJerk.std.X - The standard deviation of: The time domain signal of the body jerking (change in acceleration) in the x-axis (in xyz space) direction.</li>
+<li> tBodyAccJerk.std.Y - The standard deviation of: The time domain signal of the body jerking (change in acceleration) in the y-axis (in xyz space) direction.</li>
+<li> tBodyAccJerk.std.Z - The standard deviation of: The time domain signal of the body jerking (change in acceleration) in the z-axis (in xyz space) direction.</li>
+<li> tBodyGyro.mean.X - The mean of: The time domain signal of the gyroscope acceleration in the x-axis (in xyz space) direction.</li>
+<li> tBodyGyro.mean.Y - The mean of: The time domain signal of the gyroscope acceleration in the y-axis (in xyz space) direction.</li>
+<li> tBodyGyro.mean.Z - The mean of: The time domain signal of the gyroscope acceleration in the z-axis (in xyz space) direction.</li>
+<li> tBodyGyro.std.X - The standard deviation of: The time domain signal of the gyroscope acceleration in the x-axis (in xyz space) direction.</li>
+<li> tBodyGyro.std.Y - The standard deviation of: The time domain signal of the gyroscope acceleration in the y-axis (in xyz space) direction.</li>
+<li> tBodyGyro.std.Z - The standard deviation of: The time domain signal of the gyroscope acceleration in the z-axis (in xyz space) direction.</li>
+<li> tBodyGyroJerk.mean.X - The mean of: The time domain signal of the gyroscope jerking (change in acceleration) in the x-axis (in xyz space) direction.</li>
+<li> tBodyGyroJerk.mean.Y - The mean of: The time domain signal of the gyroscope jerking (change in acceleration) in the y-axis (in xyz space) direction.</li>
+<li> tBodyGyroJerk.mean.Z - The mean of: The time domain signal of the gyroscope jerking (change in acceleration) in the z-axis (in xyz space) direction.</li>
+<li> tBodyGyroJerk.std.X - The standard deviation of: The time domain signal of the gyroscope jerking (change in acceleration) in the x-axis (in xyz space) direction.</li>
+<li> tBodyGyroJerk.std.Y -  The standard deviation of: The time domain signal of the gyroscope jerking (change in acceleration) in the y-axis (in xyz space) direction.</li>
+<li> tBodyGyroJerk.std.Z -  The standard deviation of: The time domain signal of the gyroscope jerking (change in acceleration) in the x-axis (in xyz space) direction.</li>
+<li> tBodyAccMag.mean - The mean of: The Magnitude of the time domain signal of the body acceleration.</li>
+<li> tBodyAccMag.std - The standard deviation of: The Magnitude of the time domain signal of the body acceleration.</li>
+<li> tGravityAccMag.mean - The mean of: The Magnitude of the time domain signal of the gravity acceleration.</li>
+<li> tGravityAccMag.std - The standard deviation of: The Magnitude of the time domain signal of the gravity acceleration.</liz
+<li> tBodyAccJerkMag.mean - The mean of: The Magnitude of the time domain signal of the body jerking (change in acceleration).</li>
+<li> tBodyAccJerkMag.std - The standard deviation of: The Magnitude of the time domain signal of the body jerking (change in acceleration).</li>
+<li> tBodyGyroMag.mean -  The mean of: The Magnitude of the time domain signal of the gyroscope acceleration.</li>
+<li> tBodyGyroMag.std - The standard deviation of: The Magnitude of the time domain signal of the gyroscope acceleration.</li>
+<li> tBodyGyroJerkMag.mean - The mean of: The Magnitude of the time domain signal of the gyroscope jerking (change in acceleration).</li>
+<li> tBodyGyroJerkMag.std -  The mean of: The Magnitude of the time domain signal of the gyroscope jerking (change in acceleration).</li>
+<li> fBodyAcc.mean.X - The mean of: The frequency signal of the body acceleration in the x-axis (in xyz space) direction.</li>
+<li> fBodyAcc.mean.Y - The mean of: The frequency signal of the body acceleration in the y-axis (in xyz space) direction.li>
+<li> fBodyAcc.mean.Z - The mean of: The frequency signal of the body acceleration in the z-axis (in xyz space) direction.</li>
+<li> fBodyAcc.std.X - The standard deviation of: The frequency signal of the body acceleration in the x-axis (in xyz space) direction.</li>
+<li> fBodyAcc.std.Y - The standard deviation of: The frequency signal of the body acceleration in the y-axis (in xyz space) direction.</li>
+<li> fBodyAcc.std.Z - The standard deviation of: The frequency signal of the body acceleration in the z-axis (in xyz space) direction.</li>
+<li> fBodyAcc.meanFreq.X - The mean of: The frequency signal of the body acceleration in the x-axis (in xyz space) direction.</li>
+<li> fBodyAcc.meanFreq.Y - The mean of: The frequency signal of the body acceleration in the y-axis (in xyz space) direction.</li>
+<li> fBodyAcc.meanFreq.Z - The mean of: The frequency signal of the body acceleration in the z-axis (in xyz space) direction.</li>
+<li> fBodyAccJerk.mean.X - The mean of: The jerking (change in acceleration) of the body acceleration in the x-axis (in xyz space) direction.</li>
+<li> fBodyAccJerk.mean.Y - The mean of: The jerking (change in acceleration) of the body acceleration in the y-axis (in xyz space) direction.</li>
+<li> fBodyAccJerk.mean.Z - The mean of: The jerking (change in acceleration) of the body acceleration in the z-axis (in xyz space) direction. </li>
+<li> fBodyAccJerk.std.X - The standard deviation of: The jerking (change in acceleration) of the body acceleration in the x-axis (in xyz space) direction.</li>
+<li> fBodyAccJerk.std.Y - The standard deviation of: The jerking (change in acceleration) of the body acceleration in the y-axis (in xyz space) direction.</li>
+<li> fBodyAccJerk.std.Z - The standard deviation of: The jerking (change in acceleration) of the body acceleration in the z-axis (in xyz space) direction.</li>
+<li> fBodyAccJerk.meanFreq.X - The mean of: The jerking (change in acceleration) of the body acceleration in the x-axis (in xyz space) direction.</li>
+<li> fBodyAccJerk.meanFreq.Y - The mean of: The jerking (change in acceleration) of the body acceleration in the y-axis (in xyz space) direction. </li>
+<li> fBodyAccJerk.meanFreq.Z - The mean of: The jerking (change in acceleration) of the body acceleration in the z-axis (in xyz space) direction.</li>
+<li> fBodyGyro.mean.X -  The mean of: The frequency signal of the gyroscope acceleration in the x-axis (in xyz space) direction.</li>
+<li> fBodyGyro.mean.Y - The mean of: The frequency signal of the gyroscope acceleration in the y-axis (in xyz space) direction.</li>
+<li> fBodyGyro.mean.Z - The mean of: The frequency signal of the gyroscope acceleration in the z-axis (in xyz space) direction.</li>
+<li> fBodyGyro.std.X -  The standard deviation of: The frequency signal of the gyroscope acceleration in the x-axis (in xyz space) direction.</li>
+<li> fBodyGyro.std.Y - The standard deviation of: The frequency signal of the gyroscope acceleration in the y-axis (in xyz space) direction.</li>
+<li> fBodyGyro.std.Z - The standard deviation of: The frequency signal of the gyroscope acceleration in the z-axis (in xyz space) direction.</li>
+<li> fBodyGyro.meanFreq.X -  The mean of: The frequency signal of the body acceleration in the x-axis (in xyz space) direction.</li>
+<li> fBodyGyro.meanFreq.Y - The mean of: The frequency signal of the body acceleration in the y-axis (in xyz space) direction.</li>
+<li> fBodyGyro.meanFreq.Z - The mean of: The frequency signal of the body acceleration in the z-axis (in xyz space) direction.</li>
+<li> fBodyAccMag.mean - The mean of: The magnitude of the frequency signal of the body acceleration.</li>
+<li> fBodyAccMag.std -  The standard deviation of: The magnitude of the frequency signal of the body acceleration.</li>
+<li> fBodyAccMag.meanFreq - The mean of: The magnitude of the frequency signal of the body acceleration.</li>
+<li> fBodyBodyAccJerkMag.mean - The mean of: The jerking (change in acceleration) of the frequency signal of the body acceleration.</li>
+<li> fBodyBodyAccJerkMag.std - The standard deviation of: The jerking (change in acceleration) of the frequency signal of the body acceleration.</li>
+<li> fBodyBodyAccJerkMag.meanFreq - The mean of: The jerking (change in acceleration) of the frequency signal of the body acceleration</li>
+<li> fBodyBodyGyroMag.mean - The mean of: The of the frequency signal of the gyroscope acceleration.</li>
+<li> fBodyBodyGyroMag.std - The standard deviation of: The of the frequency signal of the gyroscope acceleration.</li>
+<li> fBodyBodyGyroMag.meanFreq - The mean of: The of the frequency signal of the gyroscope acceleration.</li>
+<li> fBodyBodyGyroJerkMag.mean - The mean of: The of the jerking (change in acceleration) of the frequency signal of the gyroscope acceleration.</li>
+<li> fBodyBodyGyroJerkMag.std - The standard deviation of: The of the jerking (change in acceleration) of the frequency signal of the gyroscope acceleration.</li>
+<li> fBodyBodyGyroJerkMag.meanFreq - The mean of: The of the jerking (change in acceleration) of the frequency signal of the gyroscope acceleration.</li>
+<li> angletBodyAccMean.gravity - The mean of: The of the frequency signal of the angle of the body.</li>
+<li> angletBodyAccJerkMean.gravityMean - The mean of: The of the frequency signal of the gyroscope acceleration.</li>
+<li> angletBodyGyroMean.gravityMean - The mean of: The of the frequency signal of the gyroscope acceleration.</li>
+<li> angletBodyGyroJerkMean.gravityMean - The mean of: The of the jerking (change in acceleration) of frequency signal of the gyroscope acceleration.</li>
+<li> angleX.gravityMean -  The mean of: The of the frequency signal of the angle of the body in the x-axis.</li>
+<li> angleY.gravityMean - The mean of: The of the frequency signal of the angle of the body in the y-axis.</li>
+<li> angleZ.gravityMean - The mean of: The of the frequency signal of the angle of the body in the z-axis.</li>
 </ol>
